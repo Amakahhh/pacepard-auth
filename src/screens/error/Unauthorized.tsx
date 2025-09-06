@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-const Unauthorized = () => {
+const UnAAuthorized = () => {
   const location = useLocation();
 
     return (
@@ -12,5 +12,5 @@ const Unauthorized = () => {
     );
   };
   
-  export default Unauthorized;
+  export default UnAAuthorized;
   
