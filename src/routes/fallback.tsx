@@ -1,6 +1,6 @@
-import Notfound from "@/screens/error/NotFound";
-import RouteFallback from "@/screens/error/ErrorUI";
-import Unauthorized from "@/screens/error/Unauthorized";
+import Notfound from "@/screens/error/not-found";
+import RouteFallback from "@/screens/error/error-ui";
+import Unauthorized from "@/screens/error/unauthorized";
 
 
 export const fallbackRoutes = [
