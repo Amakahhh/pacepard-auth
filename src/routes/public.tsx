@@ -1,4 +1,5 @@
 
+import Login from "@/screens/auth/Login";
 import { lazy } from "react";
 
 
@@ -8,4 +9,5 @@ export const publicRoutes = [
   
   
   { path: "/preview", element: <Preview /> },
+  { path: "/login", element: <Login /> },
 ];

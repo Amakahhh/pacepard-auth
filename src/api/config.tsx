@@ -3,7 +3,7 @@ import storage from "../utils/storage.util";
 import Auth from "./auth";
 import User from "./user";
 
-const BaseURL = import.meta.env.VITE_API_URL as string;
+const BaseURL = import.meta.env.VITE_API_URL_STAGING as string;
 if (!BaseURL) throw new Error("API base url not defined");
 
 /**
