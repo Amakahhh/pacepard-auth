@@ -49,6 +49,14 @@ export interface LogoutDTO {
   goTo?: (url: string) => Promise<void>
 }
 
+export interface GetUserDTO {
+  username: string
+}
+
+export interface OAuthDTO {
+  provider: "google" | "github"
+}
+
 export interface editUserDTO {
   firstName?: string;
   lastName?: string;

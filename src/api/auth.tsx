@@ -3,8 +3,10 @@ import type {
   ActivateDTO,
   ChangePasswordDTO,
   ForgotPasswordDTO,
+  GetUserDTO,
   LoginDTO,
   LogoutDTO,
+  OAuthDTO,
   RegisterUserDTO,
   ResendOtpDTO,
   ResetPasswordDTO,
@@ -81,14 +83,6 @@ class Auth {
     return this.client.post("/auth/token", payload);
   }
 
-  /**
-   * Changes user password
-   * @param {ChangePasswordDTO} payload - Password change data
-   * @returns {Promise<any>} Password change response
-   */
-  changePassword(payload: ChangePasswordDTO): Promise<IAPIResponse> {
-    return this.secondaryClient.post("/auth/change-password", payload);
-  }
 
   /**
    * Logs out a user
@@ -116,6 +110,35 @@ class Auth {
   resetPassword(payload: ResetPasswordDTO): Promise<IAPIResponse> {
     return this.secondaryClient.post("/auth/reset-password", payload);
   }
+
+    /**
+   * Changes user password
+   * @param {ChangePasswordDTO} payload - Password change data
+   * @returns {Promise<any>} Password change response
+   */
+  changePassword(payload: ChangePasswordDTO): Promise<IAPIResponse> {
+    return this.secondaryClient.post("/auth/change-password", payload);
+  }
+
+  /**
+ * Logs in user via OAuth
+ * @param {OAuthDTO} payload - OAuth provider
+ * @returns {Promise<IAPIResponse>} Redirect URL for OAuth flow
+ */
+loginWithOAuth(payload: OAuthDTO): Promise<IAPIResponse> {
+  return this.secondaryClient.post(`/auth/oauth/${payload.provider}`);
+}
+
+/**
+ * Gets a user by username
+ * @param {GetUserDTO} payload - The username payload
+ * @returns {Promise<IAPIResponse>} User data
+ */
+getUserByUsername(payload: GetUserDTO): Promise<IAPIResponse> {
+  return this.secondaryClient.get(`/auth/${payload.username}`);
+}
+
+
 }
 
 export default Auth;
