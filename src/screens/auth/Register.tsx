@@ -5,7 +5,7 @@ const Register = () => {
   return (
     <>
     <AuthLayout
-      title="Create your account"
+      title="Create your Pacepard account"
       description="Enter your information below to create your account"
       maxWidth="sm"
     >

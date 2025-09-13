@@ -1,4 +1,4 @@
-import type { LucideCrop as LucideProps } from "lucide-react"
+import type { LucideProps } from "lucide-react"
 
 export const Icons = {
   google: (props: LucideProps) => (
