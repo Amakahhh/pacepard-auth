@@ -59,7 +59,7 @@ const LoginForm = (data: IForm) => {
       >
         {/* OAuth Buttons and separator on Top */}
         <div className="grid gap-4">
-          <OAuthButtons />
+          <OAuthButtons formType="login"/>
         </div>
 
         {/*  Login Form */}

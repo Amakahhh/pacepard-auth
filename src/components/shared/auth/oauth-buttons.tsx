@@ -4,10 +4,12 @@ import { useAuthStore } from "@/store/auth/auth-store";
 
 interface OAuthButtonsProps {
   className?: string;
+  formType: "login" | "register"; // Add this prop
 }
 
-export function OAuthButtons({ className }: OAuthButtonsProps) {
+export function OAuthButtons({ className, formType }: OAuthButtonsProps) {
   const { setLoading } = useAuthStore();
+  const actionText = formType === "login" ? "Sign in" : "Sign up";
 
   const handleOAuthLogin = async (provider: "google" | "github") => {
     setLoading(true);
@@ -23,7 +25,7 @@ export function OAuthButtons({ className }: OAuthButtonsProps) {
           className="w-full h-11 border-border hover:bg-muted/50 transition-colors"
         >
           <Icons.google className="mr-2 h-4 w-4" />
-          Continue with Google
+          {actionText} with Google
         </Button>
         <Button
           variant="outline"
@@ -31,7 +33,7 @@ export function OAuthButtons({ className }: OAuthButtonsProps) {
           className="w-full h-11 border-border hover:bg-muted/50 transition-colors"
         >
           <Icons.gitHub className="mr-2 h-4 w-4" />
-          Continue with GitHub
+          {actionText} with GitHub
         </Button>
       </div>
 
