@@ -18,9 +18,14 @@ const config = {
     },
     extend: {
       colors: {
-        primary: "#030333",
-        "bg-primary": "#030333",
-        "primary-foreground": "#ffffff",
+        
+      },
+      borderRadius: {
+        'notion': '12px',
+      },
+      boxShadow: {
+        'notion-sm': '0 1px 2px rgba(0, 0, 0, 0.05)',
+        'notion-md': '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05)',
       },
       fontFamily: {
         "neue-montreal": ["NeueMontreal-Regular", "sans-serif"],

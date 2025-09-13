@@ -1,8 +1,8 @@
-import type { IAppState } from "@/utils/interfaces.util";
-import type { Theme } from "@/utils/types.util";
 import { create } from "zustand";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 
+import type { Theme } from "@/utils/types.util";
+import type { IAppState } from "@/utils/interfaces.util";
 
 // --- Helpers ---
 const getSystemTheme = (): "light" | "dark" => {

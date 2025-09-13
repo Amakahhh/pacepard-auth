@@ -8,8 +8,8 @@ export const PacepardLogo: React.FC<Omit<PacepardLogoProps, "src" | "alt">> = (p
 
   const logoSrc =
     resolvedTheme === "dark"
-      ? "/bloacks/pacepard-logo.svg"
-      : "/bloacks/pacepard-logo.svg"
+      ? "/blocks/pacepard-logo.svg"
+      : "/blocks/pacepard-logo.svg"
 
   return (
     <img
