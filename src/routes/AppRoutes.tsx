@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import type { RouteObject } from "react-router-dom";
+<<<<<<< Updated upstream
 import { publicRoutes } from "./public";
 import { privateRoutes } from "./private";
 import { fallbackRoutes } from "./fallback";
@@ -61,4 +62,21 @@ const AppRoutes = () => {
   return <>{routing}</>;
 };
 
+=======
+import { fallbackRoutes } from "./fallback";
+import { publicRoutes } from "./public";
+
+
+const AppRoutes = () => {
+	const allRoutes: RouteObject[] = [
+		...publicRoutes,
+		...fallbackRoutes,
+	];
+
+	const routing = useRoutes(allRoutes);
+
+	return <>{routing}</>;
+};
+
+>>>>>>> Stashed changes
 export default AppRoutes;

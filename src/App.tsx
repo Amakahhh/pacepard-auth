@@ -2,14 +2,21 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import { Toaster } from "sonner"
 import AppRoutes from "./routes/AppRoutes";
-
-<Toaster richColors position="top-center" />
+import { LoadingProvider } from "./contexts/LoadingContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import GlobalSpinner from "./components/ui/GlobalSpinner";
 
 const App = () => {
   return (
-    <Router>
-      <AppRoutes />
-    </Router>
+    <ThemeProvider>
+      <LoadingProvider>
+        <Router>
+          <AppRoutes />
+          <GlobalSpinner />
+        </Router>
+        <Toaster richColors position="top-center" />
+      </LoadingProvider>
+    </ThemeProvider>
   );
 };
 
