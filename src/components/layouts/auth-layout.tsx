@@ -11,7 +11,7 @@ export function AuthLayout(data: IAuthLayout) {
     showLogo = true,
     showCopyright = true,
     maxWidth = "xs",
-    backgroundImage = "/blocks/preview.png",
+    backgroundImage = "/images/four-friends.png",
     className = "",
     hideHeaderOnSuccess = false,
   } = data;
