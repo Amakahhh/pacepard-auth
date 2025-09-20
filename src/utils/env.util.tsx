@@ -3,6 +3,15 @@ class ENV {
     constructor(){}
 
     /**
+     * @name getApiBaseUrl
+     * @description get the API base URL from environment variables
+     * @returns {string} API base URL
+     */
+    public getApiBaseUrl(): string {
+        return import.meta.env.VITE_API_URL_STAGING || 'http://localhost:3000/api';
+    }
+
+    /**
      * @name isStaging
      * @description determine if app is in staging mode
      * @returns {boolean} boolean
